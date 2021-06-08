@@ -1,6 +1,7 @@
-package go_core_type
+package api_session
 
 import (
+	"github.com/pefish/go-core-type/api"
 	go_logger "github.com/pefish/go-logger"
 	"io"
 	"net/http"
@@ -32,8 +33,8 @@ type IApiSession interface {
 	UrlParams() map[string]string
 	FormValues() (map[string][]string, error)
 	ReadJSON(jsonObject interface{}) error
-	Api() IApi
-	SetApi(api IApi)
+	Api() api.IApi
+	SetApi(api api.IApi)
 	ResponseWriter() http.ResponseWriter
 	SetResponseWriter(w http.ResponseWriter)
 	Request()        *http.Request
