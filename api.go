@@ -1,4 +1,4 @@
-package _type
+package go_core_type
 
 type IApi interface {
 	GetDescription() string

@@ -1,4 +1,4 @@
-package _type
+package go_core_type
 
 import (
 	go_logger "github.com/pefish/go-logger"
