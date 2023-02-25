@@ -10,6 +10,8 @@ import (
 type StatusCode int
 
 type IApiSession interface {
+	SetPathVars(vars map[string]string)
+	PathVars() map[string]string
 	SetJwtBody(jwtBody map[string]interface{})
 	JwtBody() map[string]interface{}
 	SetUserId(userId uint64)
