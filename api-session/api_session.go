@@ -27,6 +27,7 @@ type IApiSession interface {
 	SetHeader(key string, value string)
 	WriteText(text string) error
 	SetStatusCode(code StatusCode)
+	Host() string
 	Path() string
 	Body() io.ReadCloser
 	Method() string
@@ -39,7 +40,7 @@ type IApiSession interface {
 	SetApi(api api.IApi)
 	ResponseWriter() http.ResponseWriter
 	SetResponseWriter(w http.ResponseWriter)
-	Request()        *http.Request
+	Request() *http.Request
 	SetRequest(r *http.Request)
 	Params() map[string]interface{}
 	SetParams(params map[string]interface{})
@@ -51,5 +52,3 @@ type IApiSession interface {
 	ClientType() string
 	Logger() go_logger.InterfaceLogger
 }
-
-
