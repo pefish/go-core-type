@@ -23,6 +23,7 @@ type IApiSession interface {
 	Defers() []func()
 	SetData(key string, data interface{})
 	Data(key string) interface{}
+	Redirect(url string)
 	WriteJson(data interface{}) error
 	SetHeader(key string, value string)
 	WriteText(text string) error
