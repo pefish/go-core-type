@@ -18,7 +18,8 @@ type IApiSession interface {
 	UserId() uint64
 	SetJwtHeaderName(headerName string)
 	JwtHeaderName() string
-	ScanParams(dest interface{})
+	ScanParams(dest interface{}) error
+	MustScanParams(dest interface{})
 	AddDefer(defer_ func())
 	Defers() []func()
 	SetData(key string, data interface{})
