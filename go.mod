@@ -3,8 +3,8 @@ module github.com/pefish/go-core-type
 go 1.20
 
 require (
-	github.com/pefish/go-error v1.0.7
-	github.com/pefish/go-logger v0.4.16
+	github.com/pefish/go-error v1.0.8
+	github.com/pefish/go-logger v0.5.5
 )
 
 require (

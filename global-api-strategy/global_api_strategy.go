@@ -8,10 +8,10 @@ import (
 type IGlobalApiStrategy interface {
 	Init(param interface{})
 	Execute(out _type.IApiSession, param interface{}) *go_error.ErrorInfo
-	GetName() string
-	GetDescription() string
-	GetErrorCode() uint64
+	Name() string
+	Description() string
+	ErrorCode() uint64
 	SetErrorCode(code uint64) IGlobalApiStrategy
 	SetErrorMsg(msg string) IGlobalApiStrategy
-	GetErrorMsg() string
+	ErrorMsg() string
 }
