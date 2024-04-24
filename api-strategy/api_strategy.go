@@ -6,8 +6,7 @@ import (
 )
 
 type IApiStrategy interface {
-	Init(param interface{}) IApiStrategy
-	Execute(out _type.IApiSession, param interface{}) *go_error.ErrorInfo
+	Execute(out _type.IApiSession) *go_error.ErrorInfo
 	Name() string
 	Description() string
 	ErrorCode() uint64
